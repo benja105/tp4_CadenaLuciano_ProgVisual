@@ -7,6 +7,10 @@ public class Carrera {
     private int cantidadAnios;
     private String estado;
     
+    public Carrera() {
+		// TODO Auto-generated constructor stub
+	}
+    
 	public Carrera(String codigo, String nombre, int cantidadAnios, String estado) {
 		super();
 		this.codigo = codigo;

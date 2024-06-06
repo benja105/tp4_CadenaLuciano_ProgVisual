@@ -10,6 +10,10 @@ public class Materia {
     private Docente docente;
     private Carrera carrera;
     
+    public Materia() {
+		// TODO Auto-generated constructor stub
+	}
+    
 	public Materia(String codigo, String nombre, String curso, int cantidadHoras, String modalidad, Docente docente,
 			Carrera carrera) {
 		super();
