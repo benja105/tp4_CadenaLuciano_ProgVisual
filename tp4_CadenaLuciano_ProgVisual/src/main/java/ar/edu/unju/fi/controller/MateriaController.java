@@ -23,7 +23,7 @@ public class MateriaController {
     @GetMapping("/nueva")
     public String nuevaMateria(Model model) {
         model.addAttribute("materia", new Materia());
-        return "nueva-materia";
+        return "nuevaMateria";
     }
 
     @PostMapping
@@ -36,7 +36,7 @@ public class MateriaController {
     public String editarMateria(@PathVariable String codigo, Model model) {
         Materia materia = materiaCollection.buscar(codigo);
         model.addAttribute("materia", materia);
-        return "editar-materia";
+        return "editarMateria";
     }
 
     @PostMapping("/modificar")

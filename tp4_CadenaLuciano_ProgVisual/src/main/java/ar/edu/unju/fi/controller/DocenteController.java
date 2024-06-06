@@ -23,7 +23,7 @@ public class DocenteController {
     @GetMapping("/nuevo")
     public String nuevoDocente(Model model) {
         model.addAttribute("docente", new Docente());
-        return "nuevo-docente";
+        return "nuevoDocente";
     }
 
     @PostMapping
@@ -32,11 +32,11 @@ public class DocenteController {
         return "redirect:/docentes";
     }
 
-    @GetMapping("/editar/{legajo}")
-    public String editarDocente(@PathVariable String legajo, Model model) {
-        Docente docente = docenteCollection.buscar(legajo);
+    @GetMapping("/editar/{dni}")
+    public String editarDocente(@PathVariable String dni, Model model) {
+        Docente docente = docenteCollection.buscar(dni);
         model.addAttribute("docente", docente);
-        return "editar-docente";
+        return "editarDocente";
     }
 
     @PostMapping("/modificar")
@@ -45,9 +45,9 @@ public class DocenteController {
         return "redirect:/docentes";
     }
 
-    @GetMapping("/eliminar/{legajo}")
-    public String eliminarDocente(@PathVariable String legajo) {
-        docenteCollection.eliminar(legajo);
+    @GetMapping("/eliminar/{dni}")
+    public String eliminarDocente(@PathVariable String dni) {
+        docenteCollection.eliminar(dni);
         return "redirect:/docentes";
     }
 }
