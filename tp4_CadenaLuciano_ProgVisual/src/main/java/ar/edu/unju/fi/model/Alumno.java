@@ -13,6 +13,10 @@ public class Alumno {
     private String domicilio;
     private String lu; // libreta Universitaria
     
+    public Alumno() {
+		// TODO Auto-generated constructor stub
+	}
+    
 	public Alumno(String dni, String nombre, String apellido, String email, String telefono, LocalDate fechaNacimiento,
 			String domicilio, String lu) {
 		super();
