@@ -15,7 +15,7 @@ public class AlumnoCollection {
 
     public Alumno buscar(String dni) {
         for (Alumno alumno : alumnos) {
-            if (alumno.getDni() == dni) {
+            if (alumno.getDni().equals(dni)) {
                 return alumno;
             }
         }

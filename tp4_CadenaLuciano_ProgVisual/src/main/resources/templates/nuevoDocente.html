@@ -10,6 +10,10 @@
         <h2>Nuevo Docente</h2>
         <form th:action="@{/docentes}" th:object="${docente}" method="post">
             <div class="mb-3">
+                <label for="legajo" class="form-label">Legajo</label>
+                <input type="text" class="form-control" id="legajo" th:field="*{legajo}">
+            </div>
+            <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" th:field="*{nombre}">
             </div>
@@ -18,8 +22,12 @@
                 <input type="text" class="form-control" id="apellido" th:field="*{apellido}">
             </div>
             <div class="mb-3">
-                <label for="dni" class="form-label">DNI</label>
-                <input type="text" class="form-control" id="dni" th:field="*{dni}">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" th:field="*{email}">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" th:field="*{telefono}">
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>

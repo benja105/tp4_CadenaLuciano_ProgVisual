@@ -20,7 +20,7 @@ public class MateriaController {
         return "materias";
     }
 
-    @GetMapping("/nueva")
+    @GetMapping("/nuevo")
     public String nuevaMateria(Model model) {
         model.addAttribute("materia", new Materia());
         return "nuevaMateria";

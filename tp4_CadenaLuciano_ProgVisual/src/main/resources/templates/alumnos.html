@@ -12,17 +12,27 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>DNI</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>DNI</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Domicilio</th>
+                    <th>LU</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="alumno : ${alumnos}">
+                    <td th:text="${alumno.dni}"></td>
                     <td th:text="${alumno.nombre}"></td>
                     <td th:text="${alumno.apellido}"></td>
-                    <td th:text="${alumno.dni}"></td>
+                    <td th:text="${alumno.email}"></td>
+                    <td th:text="${alumno.telefono}"></td>
+                    <td th:text="${alumno.fechaNacimiento}"></td>
+                    <td th:text="${alumno.domicilio}"></td>
+                    <td th:text="${alumno.lu}"></td>
                     <td>
                         <a th:href="@{/alumnos/editar/{dni}(dni=${alumno.dni})}" class="btn btn-warning">Editar</a>
                         <a th:href="@{/alumnos/eliminar/{dni}(dni=${alumno.dni})}" class="btn btn-danger">Eliminar</a>

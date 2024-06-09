@@ -32,9 +32,9 @@ public class DocenteController {
         return "redirect:/docentes";
     }
 
-    @GetMapping("/editar/{dni}")
-    public String editarDocente(@PathVariable String dni, Model model) {
-        Docente docente = docenteCollection.buscar(dni);
+    @GetMapping("/editar/{legajo}")
+    public String editarDocente(@PathVariable String legajo, Model model) {
+        Docente docente = docenteCollection.buscar(legajo);
         model.addAttribute("docente", docente);
         return "editarDocente";
     }
@@ -45,9 +45,9 @@ public class DocenteController {
         return "redirect:/docentes";
     }
 
-    @GetMapping("/eliminar/{dni}")
-    public String eliminarDocente(@PathVariable String dni) {
-        docenteCollection.eliminar(dni);
+    @GetMapping("/eliminar/{legajo}")
+    public String eliminarDocente(@PathVariable String legajo) {
+        docenteCollection.eliminar(legajo);
         return "redirect:/docentes";
     }
 }

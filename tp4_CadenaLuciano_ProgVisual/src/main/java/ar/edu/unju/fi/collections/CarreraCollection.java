@@ -15,7 +15,7 @@ public class CarreraCollection {
 
     public Carrera buscar(String codigo) {
         for (Carrera carrera : carreras) {
-            if (carrera.getCodigo() == codigo) {
+            if (carrera.getCodigo().equals(codigo)) {
                 return carrera;
             }
         }

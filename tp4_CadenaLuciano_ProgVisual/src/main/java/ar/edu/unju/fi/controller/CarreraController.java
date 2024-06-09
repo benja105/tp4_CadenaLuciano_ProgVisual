@@ -20,7 +20,7 @@ public class CarreraController {
         return "carreras";
     }
 
-    @GetMapping("/nueva")
+    @GetMapping("/nuevo")
     public String nuevaCarrera(Model model) {
         model.addAttribute("carrera", new Carrera());
         return "nuevaCarrera";

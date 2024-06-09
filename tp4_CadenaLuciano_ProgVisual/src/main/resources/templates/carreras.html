@@ -12,15 +12,19 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Nombre</th>
                     <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Cantidad de Años</th>
+                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="carrera : ${carreras}">
-                    <td th:text="${carrera.nombre}"></td>
                     <td th:text="${carrera.codigo}"></td>
+                    <td th:text="${carrera.nombre}"></td>
+                    <td th:text="${carrera.cantidadAnios}"></td>
+                    <td th:text="${carrera.estado}"></td>
                     <td>
                         <a th:href="@{/carreras/editar/{codigo}(codigo=${carrera.codigo})}" class="btn btn-warning">Editar</a>
                         <a th:href="@{/carreras/eliminar/{codigo}(codigo=${carrera.codigo})}" class="btn btn-danger">Eliminar</a>

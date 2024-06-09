@@ -12,15 +12,25 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Nombre</th>
                     <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Curso</th>
+                    <th>Cantidad de Horas</th>
+                    <th>Modalidad</th>
+                    <th>Docente</th>
+                    <th>Carrera</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="materia : ${materias}">
-                    <td th:text="${materia.nombre}"></td>
                     <td th:text="${materia.codigo}"></td>
+                    <td th:text="${materia.nombre}"></td>
+                    <td th:text="${materia.curso}"></td>
+                    <td th:text="${materia.cantidadHoras}"></td>
+                    <td th:text="${materia.modalidad}"></td>
+                    <td th:text="${materia.docente}"></td>
+                    <td th:text="${materia.carrera}"></td>
                     <td>
                         <a th:href="@{/materias/editar/{codigo}(codigo=${materia.codigo})}" class="btn btn-warning">Editar</a>
                         <a th:href="@{/materias/eliminar/{codigo}(codigo=${materia.codigo})}" class="btn btn-danger">Eliminar</a>
