@@ -20,10 +20,10 @@ public class CarreraController {
         return "carreras";
     }
 
-    @GetMapping("/nueva")
+    @GetMapping("/nuevo")
     public String nuevaCarrera(Model model) {
         model.addAttribute("carrera", new Carrera());
-        return "nueva-carrera";
+        return "nuevaCarrera";
     }
 
     @PostMapping
@@ -36,7 +36,7 @@ public class CarreraController {
     public String editarCarrera(@PathVariable String codigo, Model model) {
         Carrera carrera = carreraCollection.buscar(codigo);
         model.addAttribute("carrera", carrera);
-        return "editar-carrera";
+        return "editarCarrera";
     }
 
     @PostMapping("/modificar")

@@ -15,7 +15,7 @@ public class DocenteCollection {
 
     public Docente buscar(String legajo) {
         for (Docente docente : docentes) {
-            if (docente.getLegajo() == legajo) {
+            if (docente.getLegajo().equals(legajo)) {
                 return docente;
             }
         }

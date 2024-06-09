@@ -23,7 +23,7 @@ public class AlumnoController {
     @GetMapping("/nuevo")
     public String nuevoAlumno(Model model) {
         model.addAttribute("alumno", new Alumno());
-        return "nuevo-alumno";
+        return "nuevoAlumno";
     }
 
     @PostMapping
@@ -36,7 +36,7 @@ public class AlumnoController {
     public String editarAlumno(@PathVariable String dni, Model model) {
         Alumno alumno = alumnoCollection.buscar(dni);
         model.addAttribute("alumno", alumno);
-        return "editar-alumno";
+        return "editarAlumno";
     }
 
     @PostMapping("/modificar")

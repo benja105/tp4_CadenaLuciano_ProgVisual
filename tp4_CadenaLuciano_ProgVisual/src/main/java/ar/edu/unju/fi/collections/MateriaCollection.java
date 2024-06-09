@@ -15,7 +15,7 @@ public class MateriaCollection {
 
     public Materia buscar(String codigo) {
         for (Materia materia : materias) {
-            if (materia.getCodigo() == codigo) {
+            if (materia.getCodigo().equals(codigo)) {
                 return materia;
             }
         }
@@ -27,10 +27,11 @@ public class MateriaCollection {
     }
 
     public void modificar(Materia materia) {
-        Materia existente = buscar(materia.getCodigo());
-        if (existente != null) {
-            int index = materias.indexOf(existente);
-            materias.set(index, materia);
+        for (int i = 0; i < materias.size(); i++) {
+            if (materias.get(i).getCodigo().equals(materia.getCodigo())) {
+                materias.set(i, materia);
+                break;
+            }
         }
     }
 
