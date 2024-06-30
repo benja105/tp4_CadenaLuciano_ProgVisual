@@ -2,16 +2,16 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Nueva Carrera</title>
+    <title>Editar Carrera</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 </head>
 <body>
     <div class="container mt-3">
-        <h2>Nueva Carrera</h2>
-        <form th:action="@{/carreras}" th:object="${carrera}" method="post">
+        <h2>Editar Carrera</h2>
+        <form th:action="@{/carreras/modificar}" th:object="${carrera}" method="post">
             <div class="mb-3">
                 <label for="codigo" class="form-label">Código</label>
-                <input type="text" class="form-control" id="codigo" th:field="*{codigo}" required>
+                <input type="text" class="form-control" id="codigo" th:field="*{codigo}">
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>

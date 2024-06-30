@@ -11,7 +11,7 @@
         <form th:action="@{/carreras/modificar}" th:object="${carrera}" method="post">
             <div class="mb-3">
                 <label for="codigo" class="form-label">Código</label>
-                <input type="text" class="form-control" id="codigo" th:field="*{codigo}">
+                <input type="text" class="form-control" id="codigo" th:field="*{codigo}" readonly>
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>

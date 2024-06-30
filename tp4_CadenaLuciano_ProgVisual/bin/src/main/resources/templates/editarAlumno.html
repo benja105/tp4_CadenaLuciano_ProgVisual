@@ -11,7 +11,7 @@
         <form th:action="@{/alumnos/modificar}" th:object="${alumno}" method="post">
             <div class="mb-3">
                 <label for="dni" class="form-label">DNI</label>
-                <input type="text" class="form-control" id="dni" th:field="*{dni}" readonly>
+                <input type="text" class="form-control" id="dni" th:field="*{dni}">
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>

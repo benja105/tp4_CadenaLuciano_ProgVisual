@@ -2,16 +2,16 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Editar Alumno</title>
+    <title>Nuevo Docente</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 </head>
 <body>
     <div class="container mt-3">
-        <h2>Editar Alumno</h2>
-        <form th:action="@{/alumnos/modificar}" th:object="${alumno}" method="post">
+        <h2>Nuevo Docente</h2>
+        <form th:action="@{/docentes}" th:object="${docente}" method="post">
             <div class="mb-3">
-                <label for="dni" class="form-label">DNI</label>
-                <input type="text" class="form-control" id="dni" th:field="*{dni}" readonly>
+                <label for="legajo" class="form-label">Legajo</label>
+                <input type="text" class="form-control" id="legajo" th:field="*{legajo}">
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
@@ -28,18 +28,6 @@
             <div class="mb-3">
                 <label for="telefono" class="form-label">Teléfono</label>
                 <input type="text" class="form-control" id="telefono" th:field="*{telefono}">
-            </div>
-            <div class="mb-3">
-                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="fechaNacimiento" th:field="*{fechaNacimiento}">
-            </div>
-            <div class="mb-3">
-                <label for="domicilio" class="form-label">Domicilio</label>
-                <input type="text" class="form-control" id="domicilio" th:field="*{domicilio}">
-            </div>
-            <div class="mb-3">
-                <label for="lu" class="form-label">LU</label>
-                <input type="text" class="form-control" id="lu" th:field="*{lu}">
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>

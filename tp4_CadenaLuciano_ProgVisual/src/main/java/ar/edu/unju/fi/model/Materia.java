@@ -81,5 +81,13 @@ public class Materia {
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
+	
+	public String getNombreDocente() {
+        return docente != null ? docente.getNombre() + " " + docente.getApellido() : "Sin asignar";
+    }
+
+    public String getNombreCarrera() {
+        return carrera != null ? carrera.getNombre() : "Sin asignar";
+    }
     
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/header :: head"></head>
+<body>
+    <div th:replace="layouts/header :: body"></div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <aside class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://www.unju.edu.ar/biblioteca.html">Biblioteca</a></li>
+                    <li class="list-group-item"><a href="https://www.fi.unju.edu.ar/secretarias/sec-academica/calendario-academico.html">Calendario Académico</a></li>
+                </ul>
+            </aside>
+            <main class="col-md-9">
+                <section>
+                    <h2>Sobre la Facultad</h2>
+                    <p>La Facultad de Ciencias de la Programación de la Universidad Nacional de Jujuy se dedica a la formación de profesionales en el ámbito de la programación y tecnología.</p>
+                </section>
+                <section>
+                    <h2>Noticias Recientes</h2>
+                    <article>
+                        <h3>Inauguración del nuevo laboratorio de informática</h3>
+                        <p>La facultad ha inaugurado un nuevo laboratorio con equipos de última generación para mejorar la experiencia de aprendizaje de los estudiantes.</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>
