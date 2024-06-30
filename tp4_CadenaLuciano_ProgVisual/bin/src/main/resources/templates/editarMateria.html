@@ -2,16 +2,16 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Nueva Materia</title>
+    <title>Editar Materia</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 </head>
 <body>
     <div class="container mt-3">
-        <h2>Nueva Materia</h2>
-        <form th:action="@{/materias}" th:object="${materia}" method="post">
+        <h2>Editar Materia</h2>
+        <form th:action="@{/materias/modificar}" th:object="${materia}" method="post">
             <div class="mb-3">
                 <label for="codigo" class="form-label">Código</label>
-                <input type="text" class="form-control" id="codigo" th:field="*{codigo}" required>
+                <input type="text" class="form-control" id="codigo" th:field="*{codigo}">
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
@@ -28,20 +28,20 @@
             <div class="mb-3">
                 <label for="modalidad" class="form-label">Modalidad</label>
                 <select class="form-control" id="modalidad" th:field="*{modalidad}">
-                    <option value="virtual">Virtual</option>
-                    <option value="presencial">Presencial</option>
+                    <option value="virtual" th:selected="${materia.modalidad == 'virtual'}">Virtual</option>
+                    <option value="presencial" th:selected="${materia.modalidad == 'presencial'}">Presencial</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="docente" class="form-label">Docente</label>
-                <select class="form-control" id="docente" th:field="*{docente.legajo}">
-                    <option th:each="docente : ${docentes}" th:value="${docente.legajo}" th:text="${docente.nombre + ' ' + docente.apellido}"></option>
+                <select class="form-control" id="docente" th:field="*{docente}">
+                    <option th:each="docenteItem : ${docentes}" th:value="${docenteItem}" th:text="${docenteItem.nombreCompleto}"></option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="carrera" class="form-label">Carrera</label>
-                <select class="form-control" id="carrera" th:field="*{carrera.codigo}">
-                    <option th:each="carrera : ${carreras}" th:value="${carrera.codigo}" th:text="${carrera.nombre}"></option>
+                <select class="form-control" id="carrera" th:field="*{carrera}">
+                    <option th:each="carreraItem : ${carreras}" th:value="${carreraItem}" th:text="${carreraItem.nombre}"></option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>

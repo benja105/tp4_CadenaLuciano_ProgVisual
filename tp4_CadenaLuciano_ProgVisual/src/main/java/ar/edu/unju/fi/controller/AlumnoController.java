@@ -8,7 +8,7 @@ import ar.edu.unju.fi.collections.AlumnoCollection;
 import ar.edu.unju.fi.model.Alumno;
 
 @Controller
-@RequestMapping("/alumnos")
+@RequestMapping("alumnos")
 public class AlumnoController {
 
     @Autowired
